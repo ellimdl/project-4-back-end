@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const port = process.env.PORT || 5001
 // const mongoose = require("mongoose");
 
 // const connectDB = async () => {
@@ -33,7 +34,7 @@ app.put("/products/:id", updateOneProduct);
 app.delete("/products/:id", deleteOneProduct);
 
 // Start server
-app.listen(process.env.PORT, () => {
+app.listen(port, () => {
   console.log("Listening for requests...");
 });
 
