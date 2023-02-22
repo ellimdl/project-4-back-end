@@ -34,7 +34,7 @@ app.put("/products/:id", updateOneProduct);
 app.delete("/products/:id", deleteOneProduct);
 
 // Start server
-app.listen(port, () => {
+app.listen(5001, () => {
   console.log("Listening for requests...");
 });
 
