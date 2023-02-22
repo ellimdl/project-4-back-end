@@ -22,6 +22,9 @@ app.put("/products/:id", updateOneProduct);
 app.delete("/products/:id", deleteOneProduct);
 
 // Start server
-app.listen(process.env.PORT, () => {
-  console.log("Listening to port 5001...");
+connectDB().then(() => {
+  console.log("db connected");
+  app.listen(process.env.PORT, () => {
+    console.log("Listening for requests...");
+  })
 });
